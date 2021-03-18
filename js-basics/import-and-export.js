@@ -26,5 +26,15 @@ getPrice();
 // If export default is chosen, the name of the function or variable to be imported can be chosen freely like with "as" in a
 export default getMinimalPrice;
 
-import getMinPrice from './import-and-export.js'
+import getMinPrice from './import-and-export.js';
 getMinPrice();
+
+// D) Import with default();
+import * as productUtils from './import-and-export.js';
+productUtils.default();
+
+// E) Import / Export React Components
+// Enables to reuse React components
+class AboutPage extends React.Component {}
+export default AboutPage;
+import AboutPage from './import-and-export.js';
