@@ -19,8 +19,6 @@ const materials = [
 console.log(materials.map(material => material.length)); // OUTPUT: Array [8, 6, 7, 9]
 // "material" is the input parameter that is used
 
-
-
 // B) ACCESS FUNCTION PARAMETERS USING REST PARAMETERS
 // Allow to represent an indefinite number of arguments as an array with spread operator
 function sum(...someArgs) {
