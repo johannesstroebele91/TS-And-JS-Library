@@ -1,3 +1,7 @@
+// A) SHALLOW COPY: copies only the first layer of an array/object
+// B) DEEP COPY: copies all layers of an array/object
+
+
 // HOW TO MAKE AN COPY OF AN ARRAY OR OBJECT
 // If we DON'T WANT TO AFFECT THE ORIGINAL ARRAY OR OBJECT
 

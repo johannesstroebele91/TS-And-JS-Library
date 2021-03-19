@@ -75,7 +75,7 @@ if (undefined) {
 if (NaN) {
 }
 
-
+// Return value in the conditions not just true/false
 // OR: returns first value that is true
 // If no true value is found, it returns the last value
 const testOrOne = 5 || 6;

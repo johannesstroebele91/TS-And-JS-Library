@@ -1,6 +1,8 @@
+// Scope is about how variables are accessed
+
 // Several issues and how scopes are used in JavaScript
 // A) GENERAL SCOPE BEHAVIOUR
-// B) HOISTING
+// B) HOISTING (hoisting)
 
 // A) GENERAL SCOPE BEHAVIOUR
 // FUNCTION
@@ -12,6 +14,7 @@ console.log(nice);
 // OUTPUT: ReferenceError: nice is not defined
 
 // BLOCK SCOPE
+// area within if, switch conditions or for and while oops (let and const)
 if (true) {
     var testVar = 'test';
 }
