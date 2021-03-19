@@ -17,3 +17,4 @@ const reducer = (accumulator, item) => {
 // Give the reduce method the reducer function "const reducer = (accumulator, item) => {}"
 // and the initial value (here "4"
 console.log(exampleArray.reduce(reducer, 4));
+
