@@ -1,8 +1,6 @@
 // A) ALTERNATIVE TO TRADITIONAL FUNCTIONS "ARROW FUNCTIONS"
-// B) ACCESS FLEXIBLE AMOUNT OF FUNCTION PARAMETERS "REST PARAMETERS"
-
-// A) ALTERNATIVE TO TRADITIONAL FUNCTIONS "ARROW FUNCTIONS"
 // Executes in the scope they are created (does not default the "this" object to the window scope)
+
 /* Compact alternative, but has LIMITATIONS such as:
     * Not having its own bindings to this and super
     * Does not have arguments, or new.target keywords
