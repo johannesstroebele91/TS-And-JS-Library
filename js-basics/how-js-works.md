@@ -1,3 +1,7 @@
+# Reference
+Master Class: React + Typescript 2021 Web Development by Rysher Magbanua
+https://www.udemy.com/course/react-typescript-complete-master-class/
+
 # Basics
 * JS is single threaded and synchronous, but can be made async
 * synchronous code is executed in sequence – each statement waits for the previous statement to finish before executing

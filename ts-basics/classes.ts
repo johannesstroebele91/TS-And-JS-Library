@@ -7,13 +7,13 @@
 // 1) BASICS
 // Class Members can bei either class fields or methods
 console.log('1) SIMPLE EXAMPLE');
-class Point {
+class Spot {
 
     // // 1) Fields
     // // field declaration creates a public writeable property on a class
     x: number;
     y: number = 0; // Initialize values
-    z; // specification is not necessary (any is default)
+    // z; specification is not necessary (any is default)
     readonly w: number; // readonly prevents assignments to the field outside of the constructor
 
     // Constructor
@@ -30,7 +30,7 @@ class Point {
     }
 }
 
-const pt = new Point();
+const spot = new Spot();
 pt.x = 0;
 pt.y = 0;
 // pt.w = 5; // OUTPUT: error because of readonly
