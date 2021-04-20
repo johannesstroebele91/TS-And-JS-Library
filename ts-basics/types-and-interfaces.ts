@@ -19,7 +19,10 @@ function printCoordWithTypes(pt: Point) {
 
 console.log(printCoordWithTypes({ x: 100, y: 100 }));
 
-// Type alias can name a union type
+/* Type alias can name a union type
+*  allows having alternative types for a given variable
+*  if container is not of type HTMLElement, TypeScript will check again if the value is equal to the type after the pipe (|) symbol
+*  and so forth because you can have multiple types */
 type ID = number | string;
 let userIdPeter: ID = '12312';
 let userIdSarah: ID = 342;

@@ -74,8 +74,8 @@ console.log(someBooleanArray);
 // returns a new transformed array
 console.log('.map()');
 console.log(monthsArray); // Array before
-console.log(monthsArray.map(month => month.toUpperCase())); //
-console.log(monthsArray); // stay the same (not transformed)
+console.log(monthsArray.map(month => month.toUpperCase())); 
+console.log(monthsArray); // Array stays the same (not transformed)
 
 // .every()
 console.log('.every()');
@@ -83,3 +83,10 @@ console.log('.every()');
 const isBelowThreshold = (currentValue: number) => currentValue < 40;
 const array1 = [1, 30, 39, 29, 10, 13];
 console.log(array1.every(isBelowThreshold)); // output: true
+
+// .join()
+console.log('.join()');
+let arr = new Array("First","Second","Third"); 
+let str = arr.join();  // Output: str : First,Second,Third 
+console.log("str : " + str );  
+var strComma = arr.join(", "); // Output: str : First + Second + Third

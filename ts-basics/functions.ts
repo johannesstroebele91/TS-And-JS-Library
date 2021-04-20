@@ -1,9 +1,6 @@
 // Reference: https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
 
-// 1) BASICS ABOUT FUNCTIONS
-// 2) OPTIONAL PROPERTIES
-// 3) ARROW FUNCTIONS (OR CALLED LAMBDA FUNCTIONS)
-// 4) THIS
+
 
 // 1) BASICS ABOUT FUNCTIONS
 // primary means of passing data around in JavaScript
@@ -24,10 +21,16 @@ greet('Max'); // OUTPUT: Hello, Max
 // 1.2) RETURN TYPE ANNOTATIONS
 // the return type is not needed, because TS will infer it
 // explicitly specify a return type for documentation purposes or docu
-function getFavoriteNumber(): number {
-    return 26;
-}
-
+    // Function declaration
+    function greeting(who: string):string {
+        return `Hello, ${who}!`;
+    }
+    // Function expression
+    // Saves output of the function in the variable greetVar
+    const greetVar = function(who: string) {
+        return `Hello, ${who}`;
+    }
+  
 // 1.3) DIFFERENT TYPES OF DECLARATION OF FUNCTIONS
 // Named function
 function add(x: any, y: any) {
@@ -49,7 +52,25 @@ function printCoord(pt: { x: number; y: number }) {
 }
 printCoord(pt);
 
-// 2) OPTIONAL PROPERTIES
+// 2) ARROW FUNCTIONS (OR CALLED LAMBDA FUNCTIONS)
+// Compact alternative to a traditional function expression
+// this value inside of an arrow function
+// always equals this value from the outer function
+const greetArrowFct = (who: string) => {
+    return `Hello, ${who}!`;
+  }
+
+    // No arguments _
+    let sayHi = (_:string) => console.log("Hi");
+    let squareNum = (x: number) => x * x;
+    let addNumbers = (x: number, y: number) => x + y;
+    // {} are needed if more expressions are needed
+    let sum = (x: number, y: number): number => {
+        return x + y;
+    }
+    console.log(sum(10, 20)); //returns 30
+
+// 3) OPTIONAL PROPERTIES
 // Object types can also specify that some or all of their properties are optional
 function printName (obj: {first: string; last?: string}): string {
     return this.first + ' ' + this.last;
@@ -57,14 +78,7 @@ function printName (obj: {first: string; last?: string}): string {
 printName({first: 'Peter', last: 'Mueller'}); // OUPUT:
 printName({first: 'Peter'}); //
 
-// 3) ARROW FUNCTIONS (OR CALLED LAMBDA FUNCTIONS)
-// Compact alternative to a traditional function expression
-let sum = (x: number, y: number): number => {
-    return x + y;
-}
-console.log(sum(10, 20)); //returns 30
-
-// 3) Defining a Union Type
+// 4) Defining a Union Type
 // TS enables to combine types
 // each of these types are called the union’s members
 function printId(id: number | string) {
@@ -74,7 +88,7 @@ printId(101); // OUTPUT: 101
 printId("202"); // OUTPUT: 202
 // printId({ myID: 22342 }); // OUTPUT: // Error
 
-// 4) THIS OBJECT
+// 5) THIS OBJECT
 // "this" object refers to the parent object of a function where it has been executed
 // The value of this is determined on how a function is called
 // it retains the "this" object where it was created!
