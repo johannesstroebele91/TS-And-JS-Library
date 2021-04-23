@@ -43,3 +43,22 @@ function printCoordWithInterface(pt: PointInterface) {
 }
 
 console.log(printCoordWithInterface({ x: 100, y: 100 }));
+
+// Intersection types enables to extend types
+interface ITodo {
+    _id: string,
+    name: string,
+    description: string,
+    status: boolean,
+    createdAt?: string,
+    updatedAt?: string
+}
+
+type Props = TodoProps & {
+    updateTodo: (todo: ITodo) => void
+    deleteTodo: (_id: string) => void
+}
+
+interface ToDoProps {
+    todo: ITodo
+}
