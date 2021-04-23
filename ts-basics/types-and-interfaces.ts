@@ -3,6 +3,8 @@
 // HOWEVER: a type cannot be changed after declaration,
 // but an interface CAN
 
+// Tip: the file extension "type.d.ts" make types globally available
+
 // 1) TYPES
 // Creating a name for any type
 console.log('Types');
