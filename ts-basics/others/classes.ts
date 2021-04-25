@@ -31,11 +31,11 @@ class Spot {
 }
 
 const spot = new Spot();
-pt.x = 0;
-pt.y = 0;
+spot.x = 0;
+spot.y = 0;
 // pt.w = 5; // OUTPUT: error because of readonly
-console.log(pt.x, pt.y)
-console.log(`${pt.x}, ${pt.y}`);
+console.log(spot.x, spot.y)
+console.log(`${spot.x}, ${spot.y}`);
 
 
 // 2) CONSTRUCTOR OVERLOAD
