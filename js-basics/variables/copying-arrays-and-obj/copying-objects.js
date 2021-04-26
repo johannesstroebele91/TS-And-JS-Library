@@ -1,3 +1,5 @@
+// THESE APPROACHES ONLY WORK FOR OBJECTS
+
 // A) SHALLOW COPY: copies only the first layer of an array/object
 // B) DEEP COPY: copies all layers of an array/object
 
@@ -8,7 +10,7 @@
 // DOES NOT WORK AS EXPECTED, only first layer works, but no deeper layers!
 // Only copy the reference (first layer) of the object from the original
 // THEREFORE NO REAL COPY, JUST ANOTHER REFERENCE TO THE SAME OBJECT!
-console.log('***SHALLOW COPY***');
+console.log('A) SHALLOW COPY');
 
 // 1) Object:
 // "Object.assign()"
@@ -55,7 +57,7 @@ console.log(copyExampleArray);
 // WORK AS EXPECTED, not only first, but also deeper layers!
 // Copy all layers from the object from the original
 // And DOESN'T reference any values in the original
-console.log('\n\n***DEEP COPY***');
+console.log('\n\nB) DEEP COPY');
 
 // 1) SOLUTION: JSON.stringify
 // WARNING: slow performance, but easy to code

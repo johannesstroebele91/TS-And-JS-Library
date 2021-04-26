@@ -3,6 +3,11 @@
  * Further example */
 
 // Destructuring
+// Destructuring allows to easily access
+// the values of arrays or objects
+// and assign them to variables.
+
+
 // Easily extract array elements or object properties 
 // AND store them in variables
 
