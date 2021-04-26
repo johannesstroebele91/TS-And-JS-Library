@@ -1,5 +1,4 @@
 // Class is a template or blueprint for creating objects
-// Super: for calling base class attributes
 
 // Class Members
 // 1) Property: variables attached to classses
