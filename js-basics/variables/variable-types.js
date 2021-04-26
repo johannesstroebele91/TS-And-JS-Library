@@ -19,9 +19,15 @@ sample = 10;
 console.log('sample', sample); // OUTPUT: 5
 console.log('copySample', copySample); // OUTPUT: 10
 
-// B) REFERENCE TYPES
-// object and arrays
-// Change the reference and not the real values
+//  B) REFERENCE TYPES
+// Object and arrays
+
+/* If you copy a object 
+ * a new pointer is created
+ * and not a new pointer and value!
+ * SO, both objects point to the same values 
+ -> changing the value of one object
+ -> will changed the value for the other one, too */
 let firstArray = [1];
 let copyFirstArray = firstArray;
 copyFirstArray.push(2);
