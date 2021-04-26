@@ -1,5 +1,5 @@
 // ARROW FUNCTIONS (OR CALLED LAMBDA FUNCTIONS)
-// Compact alternative to a traditional function expression
+// Compact alternative to a traditional function expression 
 let sum = (x: number, y: number): number => {
     return x + y;
 }

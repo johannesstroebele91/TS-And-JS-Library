@@ -1,23 +1,4 @@
-// A) ALTERNATIVE TO TRADITIONAL FUNCTIONS "ARROW FUNCTIONS"
-// Executes in the scope they are created (does not default the "this" object to the window scope)
-
-/* Compact alternative, but has LIMITATIONS such as:
-    * Not having its own bindings to this and super
-    * Does not have arguments, or new.target keywords
-    * Not suitable for call, apply and bind methods, which generally rely on establishing a scope
-    * Can be used as constructors
-    * Can not use yield, within its body (e.g. for generators) */
-const materials = [
-    'Hydrogen',
-    'Helium',
-    'Lithium',
-    'Beryllium'
-];
-
-console.log(materials.map(material => material.length)); // OUTPUT: Array [8, 6, 7, 9]
-// "material" is the input parameter that is used
-
-// B) ACCESS FUNCTION PARAMETERS USING REST PARAMETERS
+// CCESS FUNCTION PARAMETERS USING REST PARAMETERS
 // Allow to represent an indefinite number of arguments as an array with spread operator
 function sum(...someArgs) {
     // Reduce function
