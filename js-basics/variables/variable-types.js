@@ -11,10 +11,9 @@ console.log(firstNumber); // OUTPUT: 2
 console.log(copyFirstNumber); // OUTPUT: 1
 // Changing the original and the copy will not affect each other
 
-// Example: Number
+// Inference of type: number
 let sample = 5;
 let copySample = sample;
-
 sample = 10;
 console.log('sample', sample); // OUTPUT: 5
 console.log('copySample', copySample); // OUTPUT: 10

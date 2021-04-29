@@ -23,7 +23,8 @@ getPrice();
 
 // C) EXPORT DEFAULT AND IMPORT
 // Is only possible once per file!!!
-// If export default is chosen, the name of the function or variable to be imported can be chosen freely like with "as" in a
+// If export default is chosen, the name of the function or variable to be imported
+// can be chosen freely like with "as" 
 export default getMinimalPrice;
 
 import getMinPrice from './import-and-export.js';
