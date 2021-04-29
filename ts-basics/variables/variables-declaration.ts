@@ -21,7 +21,7 @@ let someBoolean: boolean = false;
 // Insert variable into other string
 let someStringAndVariable: string = `Expected 'val' to be defined, but received ${someString}`
 
-// 3) Primitive Types
+// 3) Reference Types
 // 3.1) Array
 console.log('Arrays');
 let someNumbers: Array<number> = [1, 2, 3];

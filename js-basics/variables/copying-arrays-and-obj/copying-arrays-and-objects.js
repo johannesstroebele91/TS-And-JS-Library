@@ -1,9 +1,11 @@
-// THESE APPROACHES WORK FOR ARRAYS AND OBJECTS
-// HOW TO MAKE AN COPY OF AN ARRAY OR OBJECT
-// If we DON'T WANT TO AFFECT THE ORIGINAL ARRAY OR OBJECT
+/* THESE APPROACHES WORK FOR BOTH ARRAYS AND OBJECTS
+ * approaches that work only for arrays are explained in the array copying-arrays.js
+ * approaches that work only for objects are explained in the array copying-objects.js */
 
-// 1) SHALLOW COPY: copies only the first layer of an array/object
-// 2) DEEP COPY: copies all layers of an array/object
+/* HOW TO MAKE AN COPY OF AN ARRAY OR OBJECT
+ * If we DON'T WANT TO AFFECT THE ORIGINAL ARRAY OR OBJECT
+    1) SHALLOW COPY: copies only the first layer of an array/object
+    2) DEEP COPY: copies all layers of an array/object */
 
 // 1) SHALLOW COPY
 // WARNING! ONLY COPIES THE FIRST LAYER OF AN OBJECT (no deeper layers)
@@ -51,4 +53,7 @@ console.log(copyExampleObjectAndModify);
 // OUTPUT: WARNING! First layer was copied correctly, but not the deeper ones!!!
 
 // 2) DEEP COPY
-// See coyping-arrays.js and copying-objects.js
+// Is not possible with the spread operator
+// Therefore only possible with the dedicated approaches explained in the:
+    // coyping-arrays.js
+    // copying-objects.js

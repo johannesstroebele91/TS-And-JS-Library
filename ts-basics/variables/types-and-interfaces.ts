@@ -8,6 +8,7 @@
 // 1) TYPES
 // Creating a name for any type
 console.log('Types');
+
 type Point = {
     x: number;
     y: number;
@@ -21,15 +22,19 @@ function printCoordWithTypes(pt: Point) {
 
 console.log(printCoordWithTypes({ x: 100, y: 100 }));
 
-/* Type alias can name a union type
-*  allows having alternative types for a given variable
-*  if container is not of type HTMLElement, TypeScript will check again if the value is equal to the type after the pipe (|) symbol
-*  and so forth because you can have multiple types */
-type ID = number | string;
-let userIdPeter: ID = '12312';
-let userIdSarah: ID = 342;
+/* 2) UNION TYPE:
+* Type alias can name a union type
+* allows having alternative types for a given variable
+* if container is not of type HTMLElement, TypeScript will check again if the value is equal to the type after the pipe (|) symbol
+* and so forth because you can have multiple types */
+let course: string | number = "React – the complete guide";
 
-// 2) INTERFACES
+type identification = number | string;
+let userIdPeter: identification = '12312';
+let userIdSarah: identification = 342;
+
+
+// 3) INTERFACES
 // interface declaration is another way to name an object type
 console.log('Interfaces');
 interface PointInterface {
@@ -54,7 +59,7 @@ interface ITodo {
     updatedAt?: string
 }
 
-type Props = TodoProps & {
+type Props = ITodo & {
     updateTodo: (todo: ITodo) => void
     deleteTodo: (_id: string) => void
 }
