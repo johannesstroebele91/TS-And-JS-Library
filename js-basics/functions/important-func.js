@@ -5,6 +5,9 @@ console.log("exampleArray");
 console.log(exampleArray);
 
 // 1) Map
+// creates a new array populated
+// with the results of calling a provided function
+// on every element in the calling array.
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 console.log("map((x) => x * 2)");
 console.log(exampleArray.map((x) => x * 2)); // OUTPUT: Array [2, 8, 18, 32]
@@ -15,6 +18,9 @@ console.log(
 );
 
 // 2) Filter
+// creates a new array
+// with all elements that
+// pass the test implemented by the provided function
 console.log("filter((number) => number > 6)"); 
 console.log(exampleArray.filter((number) => number > 6)); // OUTPUT: [9, 16]
 
