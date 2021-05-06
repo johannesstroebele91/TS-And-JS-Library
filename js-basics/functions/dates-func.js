@@ -22,3 +22,12 @@ console.log(date.toLocaleString('en-US', { timeZone: 'UTC', month: "long" }))
 console.log(date.toLocaleString('en-US', {month: 'long'}));
 console.log(date.toLocaleString('en-US', {month: '2-digit'}));
 console.log(date.getFullYear());
+
+// 6) Pass a string date back into a Date object
+console.log("Pass a string date back into a Date object")
+const newDate = new Date();
+console.log("newDate: " + newDate);
+const newDateString = newDate.toLocaleString();
+console.log("newDateString: " + newDateString)
+const newDateReversed = new Date(newDateString);
+console.log("newDateReversed: " + newDateReversed)
