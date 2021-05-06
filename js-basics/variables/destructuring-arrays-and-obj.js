@@ -10,22 +10,31 @@ let exampleObj = {
 }
 
 // 1) Without Destructuring
+console.log("1) Without Destructuring");
 // 1.1) Arrays
-console.log("exampleArray[3]");
-console.log(exampleArray[3]);
+console.log("ExampleArray[3]: " + exampleArray[3]);
 // 1.2) Objects
-console.log("object");
+console.log("\nObject: ");
 console.log(exampleObj.name);
 console.log(exampleObj.education.degree);
 
 // 2) With Destructuring
-// Destructuring allows you to easily access
-// the values of arrays or objects and assign them to variables.
+console.log("2) With Destructuring"); 
+// 2.1) Normal
+// Only the first 2 elements are extracted
+// The last element is unnecessary because it wont be extracted
+const [firstElement, secondElement] = [64,12, 47];
+console.log("\nfirstElement: " + firstElement); // prints 64
+console.log("secondElement: " + secondElement); // prints 12
 
-// 2.1) Array
+// Destructuring allows you to
+// easily extracting values from arrays or objects 
+
+// 2.2) Array
+// Extracting values from an array
 const array = [1, 2, 3];
 const [a, b] = array;
-console.log(a); // prints 1
+console.log("\n" + a); // prints 1
 console.log(b); // prints 2
 console.log(array); // prints [1, 2, 3]
 

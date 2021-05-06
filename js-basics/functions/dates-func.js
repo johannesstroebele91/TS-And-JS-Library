@@ -14,3 +14,11 @@ console.log(date.toLocaleString('de-DE'))
 
 // 3) Set country based date format and timeZone manually 
 console.log(date.toLocaleString('en-US', { timeZone: 'UTC' })) 
+
+// 4) Additional options
+console.log(date.toLocaleString('en-US', { timeZone: 'UTC', month: "long" })) 
+
+// 5) Extract individual properties
+console.log(date.toLocaleString('en-US', {month: 'long'}));
+console.log(date.toLocaleString('en-US', {month: '2-digit'}));
+console.log(date.getFullYear());
