@@ -17,7 +17,7 @@ function resolveAfter2Seconds(x: number) {
   });
 }
 
-// 
+// Async function
 async function f1() {
   var x = await resolveAfter2Seconds(10);
   console.log(x); // 10
