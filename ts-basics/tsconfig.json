@@ -7,4 +7,7 @@
     "preserveConstEnums": true,
     "sourceMap": true
   },
-  "include": ["*", "/ts-basics/others/*", "/ts-basics/functions/*", "/ts-basics/variables/*"]}
+  "include": [
+    "./functions/", "./others/",  "./variables/"
+  ]
+}
