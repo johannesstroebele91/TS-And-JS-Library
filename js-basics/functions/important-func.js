@@ -92,6 +92,7 @@ console.log(exampleArray.splice(3, 1, -583));
 // divides a String into an ordered list of substrings
 // puts these substrings into an array,
 // and returns the array
+console.log('Split')
 const str = "The quick brown fox jumps over the lazy dog.";
 
 const words = str.split(" ");
@@ -108,6 +109,23 @@ console.log(strCopy);
 
 // 11) Trim
 // Removes excess whitespaces from the string
+console.log('Trim')
 untrimmedStr = "The quick brown fox     ";
 console.log(untrimmedStr)
 console.log(untrimmedStr.trim());
+
+// 12) Boolean
+// Boolean method tests methods for truthy values
+console.log('Boolean')
+const myArray = [null, false, 'Hello', undefined, 0];
+console.log(myArray.filter(Boolean)) // returns 'Hello' which is the only true value here
+
+// This explains how it works:
+// array methods take a callback function,
+// so we pass Boolean as a callback function
+myArray.filter(val => Boolean(val));
+
+// 13) Flattening Arrays of Arrays
+console.log('Flattening Arrays of Arrays')
+const unflattendArray = [{ id: 1 }, [{ id: 2 }], [{ id: 3 }]];
+console.log(unflattendArray.flat()) // returns [ { id: 1 }, { id: 2 }, { id: 3 } ]

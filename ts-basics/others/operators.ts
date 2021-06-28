@@ -1,7 +1,3 @@
-({
-  babel: true,
-});
-
 /* 1) Non-null assertion operator (!)
 Reference: https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html
 
@@ -37,6 +33,7 @@ This can be contrasted with the logical OR (||) operator,
 * which returns the right-hand side operand
 * if the left operand is any falsy value, not only null or undefined */
 
+/*
 const foo = null ?? "default string";
 console.log(foo);
 // returns "default string"
@@ -50,7 +47,7 @@ const cannotBeZero = 0 || 5;
 console.log(cannotBeZero); // returns 5
 const canBeZero = 0 ?? 5;
 console.log(canBeZero); // returns 0
-
+*/
 // 4) Chaining `.` and optional chaining `?.` operator
 // Optional chaining solve errors like TypeError: Cannot read property ‘foo’ of null
 const book = { id: 1, title: "Title", author: null as number };
@@ -89,4 +86,6 @@ console.log(!!noGreeting); // returns false
 // 7) Typeof Type operator
 // Prints "string"
 let s = "hello";
-let n: typeof s;
+console.log(typeof s); // returns string
+console.log(typeof personOptionalChaining); // returns object
+console.log(typeof processEntity); // returns function
