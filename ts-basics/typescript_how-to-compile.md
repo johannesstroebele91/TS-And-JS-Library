@@ -4,6 +4,11 @@
 2. `npm install typescript --save-devTypeScript`
 
 # 2) Execution possibilities
+
+## 2.1) Run via Code Runner VS Code extension
+1. Press F1
+2. Type run by language
+3. Type typescript
 ## 2.1) Run TS files using Quokka
 1. Install Quokka extension
 2. Set the keyboard shortcut of `Quokka.js: start on current file` to e.g. `option+shift++`

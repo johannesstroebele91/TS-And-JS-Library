@@ -56,3 +56,9 @@ console.log(exampleObjTypeInferred);
 console.log(
   "But not working with other string like this: " + exampleObjTypeInferred
 );
+
+// 2.6 Check if a Property Exists in an Object
+// Using `in` keyword
+const worker = { name: "John Doe", salary: 1000 };
+console.log("salary" in person); // return true
+console.log("age" in person); // returns false
