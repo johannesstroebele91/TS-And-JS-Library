@@ -78,19 +78,61 @@ async function demoPromiseAsyncAwait() {
 
 // 3) Rules
 /* Reference: https://betterprogramming.pub/should-i-use-promises-or-async-await-126ab5c98789#:~:text=Promise%20creation%20starts%20the%20execution,have%20any%20effect%20on%20it.
-* async functions return a promise.
-* async functions use an implicit Promise to return results
-  * Even if you don’t return a promise explicitly,
-  * the async function makes sure that your code is passed through a promise.
-* await blocks the code execution within the async function, of which it (await statement) is a part.
-* There can be multiple await statements within a single async function.
-* When using async await, make sure you use try catch for error handling.
-* Be extra careful when using await within loops and iterators
-  * You might fall into the trap of writing sequentially-executing code
-  * when it could have been easily done in parallel.
-* await is always for a single Promise.
-* Promise creation starts the execution of asynchronous functionality.
-* await only blocks the code execution within the async function
-  * It only makes sure that the next line is executed when the promise resolves
-  * So, if an asynchronous activity has already started, await will not have any effect on it.
+ * async functions return a promise.
+ * async functions use an implicit Promise to return results
+ * Even if you don’t return a promise explicitly,
+ * the async function makes sure that your code is passed through a promise.
+ * await blocks the code execution within the async function, of which it (await statement) is a part.
+ * There can be multiple await statements within a single async function.
+ * When using async await, make sure you use try catch for error handling.
+ * Be extra careful when using await within loops and iterators
+ * You might fall into the trap of writing sequentially-executing code
+ * when it could have been easily done in parallel.
+ * await is always for a single Promise.
+ * Promise creation starts the execution of asynchronous functionality.
+ * await only blocks the code execution within the async function
+ * It only makes sure that the next line is executed when the promise resolves
+ * So, if an asynchronous activity has already started, await will not have any effect on it. */
 
+// 4) Promises vs async/await
+// 4.1) Example promises
+const img = fetch("coffee.jpg")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.blob();
+  })
+  .then((myBlob) => {
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement("img");
+    image.src = objectURL;
+    document.body.appendChild(image);
+  })
+  .catch((e) => {
+    console.log(
+      "There has been a problem with your fetch operation: " + e.message
+    );
+  });
+
+// 4.2) Example async/await
+async function myFetch() {
+  let response = await fetch("coffee.jpg");
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  let myBlob = await response.blob();
+
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement("img");
+  image.src = objectURL;
+  document.body.appendChild(image);
+}
+
+myFetch().catch((e) => {
+  console.log(
+    "There has been a problem with your fetch operation: " + e.message
+  );
+});

@@ -8,6 +8,10 @@
     "sourceMap": true
   },
   "include": [
-    "./functions/", "./others/",  "./variables/"
+    "./functions/",
+    "./others/",
+    "./variables/",
+    "async-await_promises_callbacks/async-await.ts",
+    "async-await_promises_callbacks/promises-async-await.ts"
   ]
 }
