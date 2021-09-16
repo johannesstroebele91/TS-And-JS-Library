@@ -114,3 +114,16 @@ a2push.push(2); // does NOT need declaration
 
 console.log("b1", a2push);
 console.log("b2", a2push);
+
+// .flat()
+console.log(".flat()");
+// creates a new array with all sub-array elements concatenated into it recursively up to the specified depth
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// expected output: [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, 2, [[[3, 4]]]];
+
+console.log(arr2.flat(2));
+// expected output: [0, 1, 2, [3, 4]]

@@ -17,6 +17,36 @@ console.log(
   })
 );
 
+// Map Arrow function
+// Since map builds a new array, using it when you aren't using the returned array
+// is an anti-pattern; use forEach or for...of instead
+// element: current element being processed in the array
+// index (optional): index of the current element being processed in the array.
+// array (optional): array map was called upon
+// return value: new array with each element being the result of the callback function
+map((element) => {});
+map((element, index) => {});
+map((element, index, array) => {});
+
+// The array that should be mapped can be positioned differently
+// a) inside "problemRules.rules"
+const rules = map(problemRules.rules, (rule) => ({
+  rule,
+  problemId: problemRules.problemId,
+}));
+// b) outside "problemRules.rules.map"
+const rules = problemRules.rules.map((rule) => ({
+  rule,
+  problemId: problemRules.problemId,
+}));
+
+// Not only can a element be created for the new array,
+// but an object like in this example "{rule, ...}"
+const rules = problemRules.rules.map((rule) => ({
+  rule,
+  problemId: problemRules.problemId,
+}));
+
 // 2) Filter
 // creates a new array
 // with all elements that
@@ -73,6 +103,7 @@ console.log(exampleArray.concat(exampleArrayAdditional));
 https: console.log("slice(2, 4)");
 console.log(exampleArray.slice(2));
 console.log(exampleArray.slice(2, 4));
+console.log("hello".slice(-2));
 
 // 9) Splice
 // changes the contents of an array
@@ -92,7 +123,7 @@ console.log(exampleArray.splice(3, 1, -583));
 // divides a String into an ordered list of substrings
 // puts these substrings into an array,
 // and returns the array
-console.log('Split')
+console.log("Split");
 const str = "The quick brown fox jumps over the lazy dog.";
 
 const words = str.split(" ");
@@ -109,23 +140,37 @@ console.log(strCopy);
 
 // 11) Trim
 // Removes excess whitespaces from the string
-console.log('Trim')
+console.log("Trim");
 untrimmedStr = "The quick brown fox     ";
-console.log(untrimmedStr)
+console.log(untrimmedStr);
 console.log(untrimmedStr.trim());
 
 // 12) Boolean
 // Boolean method tests methods for truthy values
-console.log('Boolean')
-const myArray = [null, false, 'Hello', undefined, 0];
-console.log(myArray.filter(Boolean)) // returns 'Hello' which is the only true value here
+console.log("Boolean");
+const myArray = [null, false, "Hello", undefined, 0];
+console.log(myArray.filter(Boolean)); // returns 'Hello' which is the only true value here
 
 // This explains how it works:
 // array methods take a callback function,
 // so we pass Boolean as a callback function
-myArray.filter(val => Boolean(val));
+myArray.filter((val) => Boolean(val));
 
 // 13) Flattening Arrays of Arrays
-console.log('Flattening Arrays of Arrays')
+console.log("Flattening Arrays of Arrays");
 const unflattendArray = [{ id: 1 }, [{ id: 2 }], [{ id: 3 }]];
-console.log(unflattendArray.flat()) // returns [ { id: 1 }, { id: 2 }, { id: 3 } ]
+console.log(unflattendArray.flat()); // returns [ { id: 1 }, { id: 2 }, { id: 3 } ]
+
+// 14) Using return value of a async function using .then
+console.log(
+  "Using return value of a async function, that returns a promise, using .then"
+);
+let promiseSuccessful = Promise.resolve([1, 2, 3]);
+// This created promise is a substitute for a normal async function
+// Example: someAsyncFunction = (): Promise<any> => {...}
+promiseSuccessful.then((current) => {
+  if (!!current) {
+    console.log(current);
+  } else {
+  }
+});
