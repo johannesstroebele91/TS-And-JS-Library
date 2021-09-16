@@ -6,6 +6,11 @@ for (let i = 0; i < someArray.length; i++) {
   console.log(i); // OUTPUT: 1,2,3,4,5
 }
 
+console.log("\nfor loop");
+for (let i = 0; i < someArray.length; ++i) {
+  console.log(i); // OUTPUT: 1,2,3,4,5
+}
+
 // 2) for..in loop
 // Difference to for..of:
 // Prints the INDEXES of the array, NOT the values

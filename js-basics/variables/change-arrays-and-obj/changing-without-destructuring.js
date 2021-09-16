@@ -75,3 +75,6 @@ function sum(...someArgs) {
 console.log(sum(1, 2, 3, 4, 5, 5, 6, 6, 7, 8, 5, 3, 562, 34));
 console.log(sum(2, 3, 2, 1, 2, 5, 3, 2, 3, 1));
 console.log("Length of an array: " + lengthArray(2, 3, 2, 1, 2, 5, 3, 2, 3, 1));
+
+
+const ["h" + "ello"] = "name";
