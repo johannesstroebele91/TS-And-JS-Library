@@ -76,7 +76,7 @@ type aAndB2 = A & B;
 
 // aAndB === aAndB2
 
-const a1: aAndB2 = { a: "hi" }; // => type error, b is missing
+// const a1: aAndB2 = { a: "hi" }; // => type error, b is missing
 
 type aOrB = A | B;
 const a2: aOrB = { a: "hi" }; // works
@@ -163,4 +163,24 @@ const workingRequest: CreateArtistBioRequest = {
 
 const badRequest: CreateArtistBioRequest = {
   artistID: "banksy",
+  markdown: "",
+};
+
+// enums
+// an enums can be created as follows
+export enum DfVehicleDisplaySettingEntry {
+  DERIVATIVE = "DERIVATIVE",
+  VIN = "VIN",
+  V_NR = "V_NR",
+  Y_NR = "Y_NR",
+  LICENCE_NR = "LICENCE_NR",
+}
+
+// A object can be created based on a enum as follows
+const vehicleExample: any = {
+  [DfVehicleDisplaySettingEntry.DERIVATIVE]: "I20",
+  [DfVehicleDisplaySettingEntry.VIN]: "H019177",
+  [DfVehicleDisplaySettingEntry.Y_NR]: "Y20310",
+  [DfVehicleDisplaySettingEntry.V_NR]: "541603",
+  [DfVehicleDisplaySettingEntry.LICENCE_NR]: "M-DI 154E",
 };
