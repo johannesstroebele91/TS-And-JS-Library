@@ -25,12 +25,12 @@ let exampleObjTypeInferred = {
 // 2.2) Combined type assignment and creation
 // Type assignment: `: number`
 // Object creation: `= ...`
+// "?" operator for optional properties
 let exampleObj: {
-  name: string;
-  age: number;
+  name?: string;
+  age?: number;
 } = {
   name: "Peter",
-  age: 43,
 };
 
 // 2.3) Separate type assignment and creation
@@ -62,3 +62,30 @@ console.log(
 const worker = { name: "John Doe", salary: 1000 };
 console.log("salary" in person); // return true
 console.log("age" in person); // returns false
+
+// 2.7 Access properties of objects
+// Reference https://dmitripavlutin.com/access-object-properties-javascript/
+const hero = {
+  surname: "Batman",
+  lastname: "Robin",
+};
+
+// Dot property accessor
+console.log(hero.surname); // => 'Batman'
+
+// Square brackets property accessor
+const property = "lastname";
+console.log(hero["surname"]); // => 'Batman'
+console.log(hero[property]); // => 'Robin'
+
+// Object destructuring
+const { surname } = hero;
+console.log(surname); // => 'Batman'
+
+// Object destructuring with alias variable
+const { surname: heroName } = hero;
+
+// Dynamic property name
+// extract to variables properties with the dynamic value
+const { [property]: othername } = hero;
+othername; // => 'Batman'
