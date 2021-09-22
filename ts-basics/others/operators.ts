@@ -67,6 +67,14 @@ const personOptionalChaining = {
 console.log(personOptionalChaining.printName()); // returns 'Haseeb Anwar'
 // console.log(personOptionalChaining.doesNotExist?.()); // returns undefined
 
+export const simpleObjectFunction = () => ({ surname: "ernst" });
+console.log(simpleObjectFunction().surname);
+export const simpleArrayObjectFunction = () => [
+  { surname: "ernst" },
+  { surname: "mueller" },
+];
+console.log(simpleArrayObjectFunction()[1]);
+
 // 5) Convert String to an Integer
 const someTextString = "123";
 console.log(+someTextString); // returns an integer 123
