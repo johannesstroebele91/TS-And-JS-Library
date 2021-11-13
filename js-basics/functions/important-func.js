@@ -17,6 +17,20 @@ console.log(
   })
 );
 
+const checkins = [5, 4.4, 4.3, 3.1, 2.3, 2.2, 2.1, 1];
+const checkinsByDay = [[5], [4.4, 4.3], [3.1], [2.3, 2.2, 2.1], [1]];
+const output = checkinsByDay.flatMap((checkinsOfDay) => {
+  return checkinsOfDay.map((checkin, index) => {
+    const isLastElement = index === checkinsOfDay.length - 1;
+    const isFirstCheckinOfDay = isLastElement;
+    return {
+      date: checkin,
+      rateable: isFirstCheckinOfDay,
+    };
+  });
+});
+console.log(output);
+
 // Map Arrow function
 // Since map builds a new array, using it when you aren't using the returned array
 // is an anti-pattern; use forEach or for...of instead

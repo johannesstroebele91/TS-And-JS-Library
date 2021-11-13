@@ -3,12 +3,12 @@
 // it retains the "this" object where it was created!
 // this.console.log(setTimeout()); // OUTPUT: window object -> all functionalities of JS are coming from global window object
 const user = {
-    id: 123,
+  id: 123,
 
-    admin: false,
-    becomeAdmin: function () {
-        this.admin = true;
-    },
+  admin: false,
+  becomeAdmin: function () {
+    this.admin = true;
+  },
 };
 
 console.log(user.becomeAdmin());

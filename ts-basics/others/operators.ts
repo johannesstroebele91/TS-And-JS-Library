@@ -50,7 +50,14 @@ console.log(canBeZero); // returns 0
 */
 // 4) Chaining `.` and optional chaining `?.` operator
 // Optional chaining solve errors like TypeError: Cannot read property ‘foo’ of null
+
+// Important!!! Chaining is also possible for functions!
+// Example: extra={renderExtraLabel?.(disabled, t)}
+// This handels that if renderExtraLabel is not passed, the application does not crash
+
+// Example objects
 const book = { id: 1, title: "Title", author: null as number };
+
 /* JavaScript Examples
 console.log(book.author.age); // throws error
 console.log(book.author && book.author.age); // 1) chaining returns null, but throws error

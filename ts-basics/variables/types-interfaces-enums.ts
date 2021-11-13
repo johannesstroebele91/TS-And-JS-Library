@@ -184,3 +184,8 @@ const vehicleExample: any = {
   [DfVehicleDisplaySettingEntry.V_NR]: "541603",
   [DfVehicleDisplaySettingEntry.LICENCE_NR]: "M-DI 154E",
 };
+
+// 4) Type aliases "as"
+// "as" enables to specify a type of an element
+// outside of the defined type of the overall object
+if(event as MouseEvent).ctrlKey){}

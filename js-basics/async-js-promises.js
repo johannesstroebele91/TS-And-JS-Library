@@ -198,3 +198,37 @@ function startChangstartChangeDirectly() {
 }
 startChangstartChangeDirectly();
 // OUTPUT: 10, instead of async 5!
+
+// COMPLEX
+// How to convert then to async function
+// 1) use the name of the parameter after then
+// 2) and use it as the name of the const
+// 3) remove the brackets  for the the then function
+// 4) add await after the "="
+// 5) add async before the overall function
+function rulesFirstChain(
+  groupId: any,
+  afEntries: AFEntries
+): Promise<Problem[]> {
+  return getRules(afEntries.getRuleEntries(), groupId).then((rules) => {
+    if (isEmpty(rules)) return Promise.resolve([]); // no matching rules ? ok fine, see you...
+    return getProblems(
+      afEntries.getProblemEntries(),
+      rules.map((r) => r.problemId)
+    ).then((problems) => merge(problems, rules));
+  });
+}
+
+async function rulesFirstChainAsync(
+  groupId: any,
+  afEntries: AFEntries
+): Promise<Problem[]> {
+  const rules = await getRules(afEntries.getRuleEntries(), groupId);
+  if (isEmpty(rules)) return Promise.resolve([]); // no matching rules ? ok fine, see you...
+
+  const problems = await getProblems(
+    afEntries.getProblemEntries(),
+    rules.map((r) => r.problemId)
+  );
+  return merge(problems, rules);
+}
