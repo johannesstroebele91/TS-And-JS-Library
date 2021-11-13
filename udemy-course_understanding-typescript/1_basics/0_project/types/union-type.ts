@@ -1,3 +1,8 @@
+// UNION TYPE
+type User = { name: string } | string; // combinations are possible also between objects and strings
+let u1: User = { name: "Max" };
+u1 = "Michael";
+
 function combine(value1: string | number, value2: string | number) {
   if (typeof value1 === "number" && typeof value2 === "number") {
     return value1 + value2;
