@@ -8,18 +8,11 @@ async function hello1() {
   return "Hello1";
 }
 console.log(hello1());
-let hello2 = async function () {
-  return "Hello2";
-};
-console.log(hello2());
-let hello3 = async () => {
-  return "Hello3";
-};
-console.log(hello3());
 
 // Consume the value returned when the promise fulfills .then()
 hello1().then((value) => console.log(value));
-// Alternative hello().then(console.log)
+console.log(await hello1());
+hello1().then(console.log);
 
 // 1.2) await explanation
 /* The await expression causes async function execution
