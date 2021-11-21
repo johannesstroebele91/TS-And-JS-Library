@@ -42,10 +42,27 @@ console.log(
 );
 
 // Arrow Function with emitted return keyword
-const greetArrowFuncEmittedReturn = salary => salary * 12;
+const greetArrowFuncEmittedReturn = (salary) => salary * 12;
 console.log(greetArrowFuncEmittedReturn(6000));
 
 // ???
 const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 console.log(materials.map((material) => material.length)); // OUTPUT: Array [8, 6, 7, 9]
 // "material" is the input parameter that is used
+
+// Arrow functions don't have this keyword
+
+let me = {
+  name: "Ashutosh Verma",
+  thisInArrow: () => {
+    const name = "Other name";
+
+    console.log("My name is " + name); // no 'this' binding here
+  },
+  thisInRegular() {
+    const name = "Peter";
+    console.log("My name is " + this.name); // 'this' binding works here and references the closest non-arrow parent function
+  },
+};
+me.thisInArrow();
+me.thisInRegular();
