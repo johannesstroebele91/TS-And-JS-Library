@@ -1,3 +1,7 @@
+# 0) Easiest way to compile
+
+Just copy code to https://www.typescriptlang.org/ and click on run
+
 # 1) Prerequisites
 
 1. Install TS (https://www.typescriptlang.org/download)
