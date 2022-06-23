@@ -80,3 +80,49 @@ function testHoisting() {
   console.log("I am a function");
 }
 // OUTPUT: Successful executing, because all declarations are executed before executing the rest (like function calls)
+
+// var
+var GlobalScope = 1;
+
+function someFunc() {
+  var FunctionScope = 2;
+
+  if (true) {
+    var BlockScope = 3;
+
+    console.log(GlobalScope);
+    console.log(FunctionScope);
+    console.log(BlockScope);
+  }
+
+  console.log(GlobalScope);
+  console.log(FunctionScope);
+  console.log(BlockScope); //No Error here
+}
+
+console.log(GlobalScope);
+// console.log(FunctionScope); //error
+// console.log(BlockScope); //error
+
+// let
+let GlobalScope = 1;
+
+function someFunc() {
+  let FunctionScope = 2;
+
+  if (true) {
+    let BlockScope = 3;
+
+    console.log(GlobalScope);
+    console.log(FunctionScope);
+    console.log(BlockScope);
+  }
+
+  console.log(GlobalScope);
+  console.log(FunctionScope);
+  // console.log(BlockScope); //error
+}
+
+console.log(GlobalScope);
+// console.log(FunctionScope); //error
+// console.log(BlockScope); //error
